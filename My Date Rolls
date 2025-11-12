@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fresh Date Rolls - Homemade Healthy Snacks</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5dc;
+      color: #8b4513;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      background-color: #daa520;
+      padding: 1rem;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav li {
+      margin: 0 1rem;
+    }
+
+    nav a {
+      color: #8b4513;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #f5f5dc;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      animation: fadeIn 1s ease-in-out forwards;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    #home {
+      background-image: url('https://via.placeholder.com/1920x1080/daa520/8b4513?text=Homemade+Date+Rolls');
+      background-size: cover;
+      background-position: center;
+      color: #f5f5dc;
+      text-align: center;
+    }
+
+    #home h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    #home p {
+      font-size: 1.2rem;
+    }
+
+    #product {
+      background-color: #f5f5dc;
+      text-align: center;
+    }
+
+    .product-card {
+      background-color: #daa520;
+      border-radius: 10px;
+      padding: 2rem;
+      max-width: 400px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .product-card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .buy-now {
+      background-color: #8b4513;
+      color: #f5f5dc;
+      border: none;
+      padding: 0.7rem 1.2rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .buy-now:hover {
+      background-color: #b8860b;
+    }
+
+    #about {
+      background-color: #daa520;
+      color: #8b4513;
+      text-align: center;
+    }
+
+    #contact {
+      background-color: #f5f5dc;
+      text-align: center;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin: 0.5rem 0;
+      border: 1px solid #8b4513;
+      border-radius: 5px;
+    }
+
+    button[type="submit"] {
+      background-color: #8b4513;
+      color: #f5f5dc;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #b8860b;
+    }
+
+    #success, #cancel {
+      display: none;
+      background-color: #f5f5dc;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      nav ul { flex-direction: column; }
+      nav li { margin: 0.5rem 0; }
+      #home h1 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#product">Product</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="home">
+    <h1>Fresh Homemade Date Rolls</h1>
+    <p>Healthy, delicious, and made with love using natural ingredients.</p>
+  </section>
+
+  <section id="product">
+    <div class="product-card">
+      <img src="https://via.placeholder.com/400x300/daa520/8b4513?text=Date+Rolls" alt="Date Rolls">
+      <h2>Classic Date Roll</h2>
+      <p><strong>Price:</strong> ₹35 per piece</p>
+      <p>Made with pure dates, almonds, cashews, and a touch of coconut. No added sugar — 100% natural and homemade.</p>
+      <button class="buy-now" id="buy-now-btn">Buy Now</button>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We make fresh, homemade date rolls that are both healthy and tasty. Packed with natural sweetness, protein, and dry fruits — perfect for anytime snacking.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Want to order or ask something? Message us on WhatsApp or fill out the form below!</p>
+    <p>📞 WhatsApp: <a href="https://wa.me/8533022334"
+                    target="_blank">Chat with us</a></p>
+
+    <form id="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <section id="success">
+    <h2>Thank You!</h2>
+    <p>Your payment was successful. We'll deliver your Date Roll soon!</p>
+    <a href="#home">Back to Home</a>
+  </section>
+
+  <section id="cancel">
+    <h2>Payment Cancelled</h2>
+    <p>Your payment was cancelled. Please try again or contact us.</p>
+    <a href="#home">Back to Home</a>
+  </section>
+
+  <script src="https://js.stripe.com/v3/"></script>
+  <script>
+    const stripe = Stripe('pk_test_placeholder_stripe_publishable_key_here');
+    const priceId = 'price_placeholder_stripe_price_id_here';
+
+    document.getElementById('buy-now-btn').addEventListener('click', () => {
+      stripe.redirectToCheckout({
+        lineItems: [{ price: priceId, quantity: 1 }],
+        mode: 'payment',
+        successUrl: window.location.origin + window.location.pathname + '#success',
+        cancelUrl: window.location.origin + window.location.pathname + '#cancel',
+      }).then(function (result) {
+        if (result.error) alert(result.error.message);
+      });
+    });
+
+    document.getElementById('contact-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert("Thanks for contacting us! We'll reply soon on your email.");
+    });
+
+    window.addEventListener('load', () => {
+      const hash = window.location.hash;
+      if (hash === '#success') showSection('success');
+      else if (hash === '#cancel') showSection('cancel');
+      else showSection('home');
+    });
+
+    function showSection(id) {
+      document.querySelectorAll('section').forEach(sec => sec.style.display = 'none');
+      document.getElementById(id).style.display = 'flex';
+    }
+
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        showSection(this.getAttribute('href').substring(1));
+      });
+    });
+  </script>
+</body>
+</html>
